@@ -55,14 +55,8 @@ const startsBob = async () => {
         if (result){
             users.push(acc.getAddress());
         }
-
-        
-
-
     }
     
-    
-
     console.log(users);
 
 }
@@ -80,10 +74,6 @@ interact.ready = async () => {
     console.log("Alice is ready");
     startsBob();
 }
-
-
-
-
 // });
 
 const part = backend.Alice;
@@ -92,91 +82,4 @@ await part(ctcAlice, interact);
 console.log("Goodbye, Alice and Bob");
 
 
-
-
-// //calling getBalance() function
-// const before = await getBalance(acc);
-// console.log(`Your balance is: ${before}`);
-
-
-// const commonInteract = {
-//   reportPosition: (did,  proof_and_position) => console.log(`New position inserted \n DID: "${did}" \n proof_and_position: "${proof_and_position}"`),
-
-// };
-
-// //implement the functions to log inside the backend
-// commonInteract.log = async (...args) => {
-//   console.log(...args)
-// };
-// if (role === 'creator') { // ***** CREEATOR ******
-//   const creatorInteract = {
-//     ...commonInteract,
-//   };
-//   var did = await ask.ask(
-//     `What is your DID?`,
-//     (did => did)
-//   );
-
-//   const addrCreator = stdlib.formatAddress(acc.getAddress());
-
-//   var proof_and_location_creator = getProof_Loc_Addr({
-//     proof: String(proof_creator),
-//     location: String(location_creator),
-//     walletAddress: addrCreator
-//   });
-
-//   console.log(proof_and_location_creator)
-//   creatorInteract.decentralized_identifier = did;
-//   creatorInteract.position = proof_and_location_creator;
-  
-
-
-
-//   // await showBalance(acc);
-//   //const ctc = acc.contract(backend); //OLD VERSION
-//   ctc = acc.contract(backend); //creating the contract
-//   ctc.getInfo().then((info) => {
-//     console.log(`The contract is deployed as = ${JSON.stringify(info)}`); //display the id of the contract. It was "parse" not "stringify"
-//   });
-
-
-
-//   const part = backend.Creator;
-//   await part(ctc, creatorInteract);
-  
-//   const afterCreator = await getBalance(acc);
-//   console.log(`Your balance is: ${afterCreator}`);
-
-// } else if (role == 'attacher'){ // ***** ATTACHER ******
-//   const attacherInteract = {
-//     ...commonInteract,
-//   };
-
-
-//   const acc = await stdlib.newTestAccount(iBalance);
-
-//   //calling getBalance() function
-//   const before = await getBalance(acc);
-//   console.log(`Your balance is: ${before}`);
-
-//   const info = await ask.ask(
-//     `Please paste the contract information:`,
-//     JSON.parse
-//   );
-
-//   ctc = acc.contract(backend, info);
-
-
-//   const addrAttacher = stdlib.formatAddress(acc.getAddress());
-
-// //   const attacher_api = ctc.a.attacherAPI;
-  
-// //   await call(() => attacher_api.insert_position(
-// //         String(proof_and_location_attacher),
-// //         String(did)
-// //       )
-// //     );
-
-
-// }
 
