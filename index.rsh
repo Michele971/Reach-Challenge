@@ -1,14 +1,6 @@
 'reach 0.1';
 'use strict';
 
-// const commonInteract = {
-//   ...hasConsoleLogger,
-
-//   reportPosition: Fun([UInt, Maybe(Bytes(128))], Null),
-
-// };
-
-
 
 export const main = Reach.App(() => {
   const A = Participant('Alice', {
